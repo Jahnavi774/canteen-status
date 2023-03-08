@@ -54,7 +54,7 @@
     function reset() {
         var emailAddress = document.getElementById("passreset");
         if (emailAddress != "") {
-            const resetreq = auth.sendPasswordResetEmail(emailAddress.value);
+            const resetreq = sendPasswordResetEmail(auth,emailAddress.value);
             resetreq.then(function () {
                 alert("We sent an email with a link to get back into your account.");
             })

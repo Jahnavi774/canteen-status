@@ -51,7 +51,7 @@
     function signIn() {
         var Email = document.getElementById("email");
         var pass = document.getElementById("password");
-        const promise = auth.signInWithEmailAndPassword(Email.value, pass.value);
+        const promise = signInWithEmailAndPassword(auth,Email.value, pass.value);
         promise.catch(e => alert(e.message));
         promise.then(user => {
             console.log("Signed In as " + Email.value);
