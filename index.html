@@ -18,7 +18,7 @@
       <input type="password" class="login-box" id="password" name="pass" placeholder="Password" required>
       <p><input type="checkbox" required>I agree to terms and conditions.</p>
     </form>
-    <button class="Button1" onclick="signUp()" type="submit">Sign up </button>
+    <button class="Button1" id="sup" type="submit">Sign up </button>
     <br />
     <br />
     <hr width="40%" align="left">
@@ -67,35 +67,9 @@
     })
   }
 
-  function signIn() {
-    var Email = document.getElementById("email");
-    var pass = document.getElementById("password");
-    const promise = auth.signInWithEmailAndPassword(Email.value, pass.value);
-    promise.catch(e => alert(e.message));
-    promise.then(user => {
-      console.log("Signed In as " + Email.value);
-      window.location.href = "final2.html";
-      localStorage.setItem("current", Email.value);
-    })
-  }
+sup.addEventListener('click',signUp);
 
-  function SignOut() {
-    auth.signOut().then(() => {
-      alert("Thankyou...");
-      window.location.href = "noteslogin.html";
-      localStorage.removeItem("current");
-    })
-  }
-  function reset() {
-    var emailAddress = document.getElementById("passreset");
-    if (emailAddress != "") {
-      const resetreq = auth.sendPasswordResetEmail(emailAddress.value);
-      resetreq.then(function () {
-        alert("We sent an email with a link to get back into your account.");
-      })
-      resetreq.catch(e => alert(e.message));
-    }
-  }
+  
 </script>
 
 </html>
