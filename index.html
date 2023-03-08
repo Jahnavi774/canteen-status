@@ -51,21 +51,33 @@
   // firebase.analytics(); 
   const auth = getAuth();
 
-  function signUp() {
-    var Email = document.getElementById("email");
-    var pass = document.getElementById("password");
-    const promise = createUserWithEmailAndPassword(auth,Email.value, pass.value);
-    promise.catch(e => alert(e.message + " Try again."));// alert us if any error occur i.e wrong format of email or password is < 6 characters
-    promise.then(user => {
-      set(ref(database, 'users/' + user.uid), {
-        email: Email
-      })
-      console.log(user);
-      alert("Signed Up");
-      window.location.href = "final2.html";
-      localStorage.setItem("current", Email.value);
-    })
+  // function signUp() {
+  //   var Email = document.getElementById("email");
+  //   var pass = document.getElementById("password");
+  //   const promise = createUserWithEmailAndPassword(auth,Email.value, pass.value);
+  //   promise.catch(e => alert(e.message + " Try again."));// alert us if any error occur i.e wrong format of email or password is < 6 characters
+  //   promise.then(user => {
+  //     set(ref(database, 'users/' + user.uid), {
+  //       email: Email
+  //     })
+  //     console.log(user);
+  //     alert("Signed Up");
+  //     window.location.href = "final2.html";
+  //     localStorage.setItem("current", Email.value);
+  //   })
+  // }
+  const signUp = async () => {
+  const email = document.getElementById("email");
+  const password =document.getElementById("password");
+
+  try {
+    await createUserWithEmailAndPassword(auth, email, password)
   }
+  catch(error) {
+    console.log(`There was an error: ${error}`)
+    showLoginError(error)
+  } 
+}
 
 sup.addEventListener('click',signUp);
 
