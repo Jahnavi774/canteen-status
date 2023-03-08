@@ -67,22 +67,26 @@
   //   })
   // }
   const signUp = async () => {
-  const email = document.getElementById("email");
-  const password =document.getElementById("password");
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-  try {
-    await createUserWithEmailAndPassword(auth, email, password)
+    try {
+      await createUserWithEmailAndPassword(auth, email, password)
+      alert("Signed Up");
+      console.log("signed up");
+      localStorage.setItem("current", Email.value);
+      window.location.href = "final2.html";
+    }
+    catch (error) {
+      console.log(`There was an error: ${error}`)
+      // showLoginError(error)
+      alert(error.message + " Try again.")
+    }
   }
-  catch(error) {
-    console.log(`There was an error: ${error}`)
-    // showLoginError(error)
-    alert(error.message + " Try again.")
-  } 
-}
 
-sup.addEventListener('click',signUp);
+  sup.addEventListener('click', signUp);
 
-  
+
 </script>
 
 </html>
