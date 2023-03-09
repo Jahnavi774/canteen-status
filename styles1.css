@@ -110,7 +110,7 @@ h1 {
 }
 
 #animi {
-    font-size: 1.8cm;
+    font-size: 1.5cm;
     color: black;
     animation: type 6s steps(13);
     overflow: hidden;
@@ -121,7 +121,7 @@ h1 {
     -webkit-animation-iteration-count: infinite;
     animation-direction: alternate;
     text-align: left;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
 @keyframes type {
