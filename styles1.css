@@ -1,7 +1,7 @@
-#signup{
+#signup {
     width: 300px;
-    box-shadow: 0 0 3px 0  ;
-    background-color:white;
+    box-shadow: 0 0 3px 0;
+    background-color: white;
     padding: 30px;
     padding-bottom: 300px;
     padding-top: 10px;
@@ -9,7 +9,8 @@
     height: 170px;
     border-radius: 10px;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,16 +24,18 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.login-box{
+
+.login-box {
     border-radius: 20px;
     padding: 10px;
     margin: 10px 0;
     width: 100%;
-    border: 1px solid #999 ;
+    border: 1px solid #999;
     outline: none;
-    
+
 }
-button{
+
+button {
     width: 100%;
     padding: 10px;
     border-radius: 20px;
@@ -40,84 +43,98 @@ button{
     margin: 10px 0;
     border: none;
     outline: none;
-    cursor: pointer ;
-    
-}
-.Button1{
+    cursor: pointer;
 
-    background-color:  #5970f3fa; 
-    color:white;
- }
-.Button2{
+}
+
+.Button1 {
+
+    background-color: #5970f3fa;
+    color: white;
+}
+
+.Button2 {
     background-color: skyblue;
     color: white;
     border-radius: 5px;
 }
-.Button3{
+
+.Button3 {
 
     background-color: rgb(21, 228, 21);
     color: white;
     width: 70%;
- }
- h1{
-     color: #4d4dff;
-    
- }
-#icon{
-  width: 170px;
-  margin-top: -70px;
 }
-#logo{
+
+h1 {
+    color: #4d4dff;
+
+}
+
+#icon {
+    width: 170px;
+    margin-top: -70px;
+}
+
+#logo {
     position: absolute;
     top: 30%;
     left: 5%;
-    
+
 }
-#or{
+
+#or {
     margin-top: -20px;
 }
-#hr2{
+
+#hr2 {
     margin-top: -9px;
 }
-.login{
+
+.login {
     width: 300px;
-    box-shadow: 0 0 3px 0  ;
-    background-color:white;
+    box-shadow: 0 0 3px 0;
+    background-color: white;
     padding: 30px;
     padding-bottom: 130px;
     padding-top: 10px;
-    margin: 8% auto 0 ;
+    margin: 8% auto 0;
     text-align: center;
     height: 184px;
     border-radius: 10px;
 }
-#loginicon{
+
+#loginicon {
     width: 100px;
     margin-top: -70px;
-  }
-  #animi{
-     font-size: 1.8cm;
-      color: black;
-      animation: type 6s steps(13);
-      overflow: hidden;
-      white-space: nowrap;
-      font-family: 'Truculenta', sans-serif;
-      border-right: 3px solid black;
-      width: 13ch;
-      -webkit-animation-iteration-count:infinite;
-      animation-direction: alternate;
-     text-align: left;
-    margin-top: 230px; 
-  }
-  @keyframes type{
-      0% {
-          width: 0ch;
-      }
-      100% {
-          width: 10ch;
-      }
-  }
-  .Phoneverify{
+}
+
+#animi {
+    font-size: 1.8cm;
+    color: black;
+    animation: type 6s steps(13);
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Truculenta', sans-serif;
+    border-right: 3px solid black;
+    width: 13ch;
+    -webkit-animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-align: left;
+    margin-top: 10px;
+}
+
+@keyframes type {
+    0% {
+        width: 0ch;
+    }
+
+    100% {
+        width: 8ch;
+    }
+}
+
+.Phoneverify {
     width: 100%;
     padding: 10px;
     border-radius: 20px;
@@ -125,29 +142,32 @@ button{
     margin: 10px 0;
     border: none;
     outline: none;
-    cursor: pointer ;
+    cursor: pointer;
     background-color: rgb(63, 245, 63);
     color: white;
-  }
-  #pp{
+}
+
+#pp {
     width: 110px;
     margin-top: -70px;
-  }
-.phone{
+}
+
+.phone {
     width: 300px;
-    box-shadow: 0 0 3px 0  ;
-    background-color:white;
+    box-shadow: 0 0 3px 0;
+    background-color: white;
     padding: 30px;
     padding-bottom: 170px;
     padding-top: 10px;
-    margin: 8% auto 0 ;
+    margin: 8% auto 0;
     text-align: center;
     height: 180px;
     border-radius: 15px;
-   
+
 
 }
-#userdiv{
+
+#userdiv {
     text-align: center;
     height: 150px;
     width: 200px;
@@ -155,6 +175,4 @@ button{
     margin: 8% auto 0;
     background-color: white;
     border-radius: 20px;
-  }
-
-
+}
