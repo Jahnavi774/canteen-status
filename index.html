@@ -1,91 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MyOnlineMeal.com</title>
-    <link rel="stylesheet" href="styles1.css" />
-  </head>
 
-  <body>
-    <div id="signup">
-      <h1>Sign Up</h1>
-      <form>
-        <input
-          type="email"
-          class="login-box"
-          id="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          class="login-box"
-          id="password"
-          name="pass"
-          placeholder="Password"
-          required
-        />
-        <p>
-          <input type="checkbox" required />I agree to terms and conditions.
-        </p>
-      </form>
-      <button class="Button1" id="sup" type="submit">Sign up</button>
-      <br />
-      <br />
-      <hr width="40%" align="left" />
-      <hr id="hr2" width="40%" align="right" />
-      <p id="or">OR</p>
-      <!-- <hr> gives a horizontal line-->
-      Have an account?
-      <a href="login.html">Sign In</a>
-    </div>
-  </body>
-  <script type="module">
-    // The core Firebase JS SDK is always required and must be listed first
+<head>
+  <title>MyOnlineMeal.com</title>
+  <link rel="stylesheet" href="styles1.css" />
+</head>
 
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-    import {
-      getDatabase,
-      set,
-      ref,
-    } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
-    import {
-      getAuth,
-      createUserWithEmailAndPassword,
-    } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
-    // Your web app's Firebase configuration.
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyDtGeLOE1pPLd-8IzV8f1RZUfr2UAVnYZI",
-      authDomain: "online-meal-280c1.firebaseapp.com",
-      projectId: "online-meal-280c1",
-      storageBucket: "online-meal-280c1.appspot.com",
-      messagingSenderId: "662721131983",
-      appId: "1:662721131983:web:373723683c1b0d8c564eba",
-      measurementId: "G-9PSGT1BPS0",
-    };
+<body>
+  <div id="signup">
+    <h1>Sign Up</h1>
+    <form>
+      <input type="email" class="login-box" id="email" name="email" placeholder="Email" required />
+      <input type="password" class="login-box" id="password" name="pass" placeholder="Password" required />
+      <p>
+        <input type="checkbox" required />I agree to terms and conditions.
+      </p>
+    </form>
+    <button class="Button1" id="sup" type="submit">Sign up</button>
+    <br />
+    <br />
+    <hr width="40%" align="left" />
+    <hr id="hr2" width="40%" align="right" />
+    <p id="or">OR</p>
+    <!-- <hr> gives a horizontal line-->
+    Have an account?
+    <a href="login.html">Sign In</a>
+  </div>
+</body>
+<script type="module">
+  // The core Firebase JS SDK is always required and must be listed first
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const auth = getAuth();
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import {
+    getDatabase,
+    set,
+    ref,
+  } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+  } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  // Your web app's Firebase configuration.
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCWxW0gEXVWvVCdZXYERqHTx6eqcJl6l90",
+    authDomain: "canteen-status-45757.firebaseapp.com",
+    databaseURL: "https://canteen-status-45757-default-rtdb.firebaseio.com",
+    projectId: "canteen-status-45757",
+    storageBucket: "canteen-status-45757.appspot.com",
+    messagingSenderId: "485236838100",
+    appId: "1:485236838100:web:0f1772e4fec5a837f8b541"
+  };
 
-    const signUp = async () => {
-      const Email = document.getElementById("email").value;
-      const Password = document.getElementById("password").value;
-      console.log(Email);
-      try {
-        await createUserWithEmailAndPassword(auth, Email, Password);
-        alert("Signed Up");
-        console.log("signed up");
-        localStorage.setItem("current", Email.value);
-        window.location.href = "first_home.html";
-      } catch (error) {
-        console.log(`There was an error: ${error}`);
-        alert(error.message + " Try again.");
-      }
-    };
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
 
-    sup.addEventListener("click", signUp);
-  </script>
+  const signUp = async () => {
+    const Email = document.getElementById("email").value;
+    const Password = document.getElementById("password").value;
+    console.log(Email);
+    try {
+      await createUserWithEmailAndPassword(auth, Email, Password);
+      alert("Signed Up");
+      console.log("signed up");
+      localStorage.setItem("current", Email.value);
+      window.location.href = "first_home.html";
+    } catch (error) {
+      console.log(`There was an error: ${error}`);
+      alert(error.message + " Try again.");
+    }
+  };
+
+  sup.addEventListener("click", signUp);
+</script>
+
 </html>
