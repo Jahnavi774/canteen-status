@@ -14,7 +14,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("https://www.thepencompany.com/blog/wp-content/uploads/bigstock-White-Fountain-Pen-Writing-A-L-295002112-2-1.jpg");
+    /* background-image: url("https://www.thepencompany.com/blog/wp-content/uploads/bigstock-White-Fountain-Pen-Writing-A-L-295002112-2-1.jpg"); */
+    background-image: url(https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-size: cover;
     background-position: center;
     width: 100vw;
